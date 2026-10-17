@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-18",
+  "generatedAtUtc": "2026-10-17T17:26:50.216103+00:00",
+  "scope": "exact replay of four original public demos before generating ten additions",
+  "packages": {
+    "python": "3.11.17",
+    "openecg": "0.11.0",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "wfdb": "4.3.1",
+    "onnxruntime": "1.31.0",
+    "tflite-runtime": "2.14.0"
+  },
+  "model": {
+    "status": "identified",
+    "files": [
+      {
+        "attribute": "detector.path",
+        "filename": "boundary_int8.tflite",
+        "bytes": 1480128,
+        "sha256": "2e130ed795491764ffa4f7eff5decc06a4531ac69e1cab51bfbffa714bc0b3fb"
+      }
+    ],
+    "reason": null
+  },
+  "records": [
+    {
+      "id": "ludb-16",
+      "originalSha256": "d543dbf1fe31bb71edee8b386f18fff54ea458a6513b141ab2ae13f08164655b",
+      "allFieldsExactlyEqual": true,
+      "differentFields": [],
+      "rawMaxAbsDiff": 0.0,
+      "filteredMaxAbsDiff": 0.0,
+      "originalFileModified": false
+    },
+    {
+      "id": "ludb-1",
+      "originalSha256": "726bf430aff7a228e9fea0176c157eb4182284cf1277ec5430aae4521377cc28",
+      "allFieldsExactlyEqual": true,
+      "differentFields": [],
+      "rawMaxAbsDiff": 0.0,
+      "filteredMaxAbsDiff": 0.0,
+      "originalFileModified": false
+    },
+    {
+      "id": "qtdb-sel100",
+      "originalSha256": "d1d1153cd21f64c72e987e2abe38237c628fdbbcb0baa10b955de501cc454bc3",
+      "allFieldsExactlyEqual": true,
+      "differentFields": [],
+      "rawMaxAbsDiff": 0.0,
+      "filteredMaxAbsDiff": 0.0,
+      "originalFileModified": false
+    },
+    {
+      "id": "qtdb-sel103",
+      "originalSha256": "a6bbfca55264c847b812e5128ff636e3094f474a893a88a1067a65567971670a",
+      "allFieldsExactlyEqual": true,
+      "differentFields": [],
+      "rawMaxAbsDiff": 0.0,
+      "filteredMaxAbsDiff": 0.0,
+      "originalFileModified": false
+    }
+  ],
+  "status": "passed"
+}

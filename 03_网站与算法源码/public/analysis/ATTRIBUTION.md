@@ -1,0 +1,46 @@
+# 数据署名与许可
+
+# 来源与许可说明
+
+官方来源核对日期：2026-10-18。以下说明保留第三方的作者和许可范围，不给第三方数据或模型重新授权。
+
+## OpenECG
+
+- 项目：Hyung-Chul Lee and OpenECG contributors，https://github.com/vitaldb/openecg 。
+- 上游代码许可证：Apache License 2.0，官方文件：https://github.com/vitaldb/openecg/blob/main/LICENSE 。
+- 本项目通过依赖调用 `openecg[deploy]==0.11.0`，冻结预测标签记录为 `v56c int8`。
+- 本包不包含 OpenECG 上游源码副本或模型权重；权重的使用与分发应遵守实际下载版本的上游条款。
+- 本包没有训练新模型，也不把上游模型能力列为本项目原创。
+
+## LUDB
+
+- Lobachevsky University Electrocardiography Database，version 1.0.1，PhysioNet。
+- 作者：Alena Kalyakulina, Igor Yusipov, Viktor Moskalenko, Alexander Nikolskiy, Konstantin Kosonogov, Nikolai Zolotykh, Mikhail Ivanchenko。
+- 官方数据页：https://physionet.org/content/ludb/1.0.1/ ；DOI：https://doi.org/10.13026/eegm-h675 。
+- 官方许可证：https://physionet.org/files/ludb/1.0.1/LICENSE.txt ，Open Data Commons Attribution License v1.0。
+- 本包包含 16、1、2、3、4、5、6、7、8、9 的 `.dat`、`.hea`、`.ii` 文件，演示使用 II 导联前十秒。
+
+## QT Database
+
+- QT Database，version 1.0.0，PhysioNet；Roger Mark, George Moody。
+- 官方数据页：https://physionet.org/content/qtdb/1.0.0/ ；DOI：https://doi.org/10.13026/C24K53 。
+- 官方许可证页：https://physionet.org/content/qtdb/view-license/1.0.0/ ，Open Data Commons Attribution License v1.0。
+- 引用：Laguna P, Mark RG, Goldberger AL, Moody GB. A Database for Evaluation of Algorithms for Measurement of QT and Other Waveform Intervals in the ECG. Computers in Cardiology 24:673-676 (1997).
+- 本包包含 sel100、sel103、sel114、sel116、sel117、sel123、sel213、sel221、sel230、sel231 的 `.dat`、`.hea`、`.q1c` 文件；各导联和十秒窗口以 `scripts/demo_catalog.py` 为准。
+
+## 数据及派生结果的署名
+
+Contains information from the Lobachevsky University Electrocardiography Database and QT Database,
+which are made available under the ODC Attribution License v1.0.
+
+许可正文 URI：https://opendatacommons.org/licenses/by/1-0/ 。
+原始 60 个文件按字节保留；`public/demo/` 是抽取、重采样、滤波、截窗与模型预测后的派生 JSON；
+`public/analysis/` 是从这些冻结 JSON 计算的课程测量与对照结果；网页内嵌这些派生数据。
+数据许可证和归属同样适用于相关信息，不能把这些数据与模型权重统一标成课程新增代码的许可证。
+原始文件和派生文件的 SHA-256 在根目录清单中列出。
+
+## 课程新增代码与依赖
+
+本准备包没有替作者选择新增代码的对外授权许可证；如需开源授权，可在明确选择后单独添加，
+同时保留本说明和原始数据署名。依赖项各按自身许可证使用；本包不捆绑第三方 Python 包。
+历史 React/Sites 模板、其 vendor 文件、旧截图、SSH 交接文档和内部云主机配置没有纳入仓库；演示访问入口见根 README。
