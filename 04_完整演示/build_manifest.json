@@ -7,7 +7,7 @@
     "APPLEWATCH": 5
   },
   "anonymousUniqueMeasurements": 5,
-  "defaultRecord": "anonymous-a",
+  "defaultRecord": "ludb-16",
   "modelInferenceExecuted": false,
   "anonymousSourceWindowsSec": {
     "anonymous-a": [
@@ -39,7 +39,7 @@
   "publishedToCloud": false,
   "uploadedToGitHub": false,
   "outputs": {
-    "app.js": "f06693c534efd26b0c38581ada47c752a05d86b488f31bf6a9ff3f12693a968e",
-    "OpenECG_Demo.html": "6d7589d406ae33ec4985f956b527764a49509809ac8a3e087adae31f4f848a5d"
+    "app.js": "166cfec286711d76d1d1079f26546c4af618c1dff8b033830193b8076361cd65",
+    "OpenECG_Demo.html": "3142450d89ea35277d9b0bbef8f1b658a6ae713a2c4686fc0f4db9810b2b5371"
   }
 }

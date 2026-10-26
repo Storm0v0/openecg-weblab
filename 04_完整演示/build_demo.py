@@ -126,7 +126,7 @@ def main():
         'scope': 'public 25-record demonstration', 'recordCount': len(records),
         'sourceCounts': dict(Counter(r['dataset'] for r in records)),
         'anonymousUniqueMeasurements': json.loads(PRIVATE_CATALOG.read_text(encoding='utf-8'))['uniqueMeasurements'],
-        'defaultRecord': 'anonymous-a', 'modelInferenceExecuted': False,
+        'defaultRecord': 'ludb-16', 'modelInferenceExecuted': False,
         'anonymousSourceWindowsSec': {r['id']: r['pdfReconstruction']['windowSec']
                                     for r in records if r['dataset'] == 'APPLEWATCH'},
         'frozenValuesPreserved': True,
@@ -140,7 +140,7 @@ def main():
     atomic_text(HERE / 'build_manifest.json',
                 json.dumps(audit, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({'status': 'built 25-record demonstration', 'recordCount': len(records),
-                     'sourceCounts': audit['sourceCounts'], 'defaultRecord': 'anonymous-a',
+                     'sourceCounts': audit['sourceCounts'], 'defaultRecord': 'ludb-16',
                      'inferenceExecuted': False, 'output': 'OpenECG_Demo.html'},
                      ensure_ascii=False))
 

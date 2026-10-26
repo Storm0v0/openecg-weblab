@@ -84,7 +84,7 @@ ids.get('steps').children=Array.from({length:3},()=>{const el=new Element();el.c
 ids.get('demo-data').textContent=JSON.stringify(data);
 const tabs=sources.map(source=>{const el=ids.get('tab-'+source.toLowerCase());assert(el,source+' tab');el.dataset.source=source;return el;});
 const waves=['P','QRS','T','R'].map(type=>{const el=new Element();el.dataset.wave=type;return el;});
-const tablist=new Element(),document={getElementById:id=>ids.get(id),querySelectorAll:s=>s==='[data-source]'?tabs:s==='[data-wave]'?waves:[],querySelector:()=>tablist,createElement:()=>new Element(),createTextNode:s=>({textContent:s}),body:new Element(),activeElement:tabs[2]};
+const tablist=new Element(),document={getElementById:id=>ids.get(id),querySelectorAll:s=>s==='[data-source]'?tabs:s==='[data-wave]'?waves:[],querySelector:()=>tablist,createElement:()=>new Element(),createTextNode:s=>({textContent:s}),body:new Element(),activeElement:tabs[0]};
 const downloads=[],downloadURL={createObjectURL:blob=>{downloads.push(blob);return 'blob:test-'+downloads.length;},revokeObjectURL:()=>{}};
 const context={document,console,Blob,URL:downloadURL,setTimeout:cb=>cb(),requestAnimationFrame:cb=>setImmediate(cb)};context.globalThis=context;vm.createContext(context);
 let code=html.match(/<script>\s*([\s\S]*?)<\/script>/)[1];
@@ -115,8 +115,8 @@ function assertUnavailable(d){
  assert(ids.get('comparison-status').textContent.includes('人工'));
 }
 (async()=>{
- await idle();assert.equal(api.state.current.id,'anonymous-a');assert.equal(api.state.source,'APPLEWATCH');assertSourceOptions('APPLEWATCH');
- assert(ids.get('record-title').textContent.includes('A'));assertUnavailable(api.state.current);
+ await idle();assert.equal(api.state.current.id,'ludb-16');assert.equal(api.state.source,'LUDB');assertSourceOptions('LUDB');
+ assert(ids.get('record-title').textContent.includes('16'));assert.equal(ids.get('record').value,'ludb-16');assert.equal(api.state.range.join(','),'0,10');
  const fullRange=api.state.range.join(',');let ordinaryPrevented=false,ctrlPrevented=false;
  ids.get('plot').handlers.wheel({deltaY:-100,clientX:500,ctrlKey:false,preventDefault(){ordinaryPrevented=true;}});assert.equal(ordinaryPrevented,false);assert.equal(api.state.range.join(','),fullRange);
  ids.get('plot').handlers.wheel({deltaY:-100,clientX:500,ctrlKey:true,preventDefault(){ctrlPrevented=true;}});assert(ctrlPrevented);assert(api.state.range[1]-api.state.range[0]<10);api.reset();

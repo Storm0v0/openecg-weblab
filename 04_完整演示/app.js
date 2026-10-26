@@ -4,7 +4,7 @@ let records=[],dataError=null;
 try{const parsed=JSON.parse(document.getElementById('demo-data').textContent);if(!Array.isArray(parsed)||!parsed.length)throw Error();records=parsed;}catch{dataError='内置示例数据无法读取，请使用完整的演示文件。';}
 const $ = id => document.getElementById(id);
 const colors = {P:'#e88089',QRS:'#45a5d1',T:'#39b497',R:'#e6a044'};
-const state = {source:'APPLEWATCH',selected:'anonymous-a',current:null,filtered:true,truth:false,flags:{P:true,QRS:true,T:true,R:true},range:[0,10],busy:false,drag:null,geometry:null,focus:null,comparisonKind:'all',issuesOnly:false};
+const state = {source:'LUDB',selected:'ludb-16',current:null,filtered:true,truth:false,flags:{P:true,QRS:true,T:true,R:true},range:[0,10],busy:false,drag:null,geometry:null,focus:null,comparisonKind:'all',issuesOnly:false};
 const plot = $('plot');
 const sourceNames={LUDB:'LUDB',QTDB:'QTDB',APPLEWATCH:'Apple Watch'};
 const sourceTabs={LUDB:'tab-ludb',QTDB:'tab-qtdb',APPLEWATCH:'tab-applewatch'};

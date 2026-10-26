@@ -1,6 +1,6 @@
 # 25 条完整演示
 
-用浏览器打开 `OpenECG_Demo.html`。包含 LUDB 10 条、QTDB 10 条、Apple Watch 匿名记录 A–E 五条；默认展示 A，切换记录自动加载。
+用浏览器打开 `OpenECG_Demo.html`。包含 LUDB 10 条、QTDB 10 条、Apple Watch 匿名记录 A–E 五条；默认展示 LUDB 记录 16，切换记录自动加载。
 
 ```sh
 python "04_完整演示/build_demo.py"

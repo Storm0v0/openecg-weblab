@@ -11,7 +11,7 @@ git clone https://github.com/storm0699/openecg-weblab.git
 cd openecg-weblab
 ```
 
-下载后用浏览器打开 **`04_完整演示/OpenECG_Demo.html`**。样式、脚本和数据已内嵌，无需安装 Python 或 npm 依赖。默认展示 Apple Watch 匿名记录 A；选择记录后自动展示。页面标题下附有本仓库链接。
+下载后用浏览器打开 **`04_完整演示/OpenECG_Demo.html`**。样式、脚本和数据已内嵌，无需安装 Python 或 npm 依赖。默认展示 LUDB 记录 16；选择记录后自动展示。页面标题下附有本仓库链接。
 
 在线演示：**http://124.71.24.143/**。华为云已部署当前 25 条匿名记录版本，可直接打开，无需登录 GitHub。
 

@@ -692,23 +692,23 @@
     },
     {
       "path": "04_完整演示/OpenECG_Demo.html",
-      "bytes": 1409236,
-      "sha256": "6d7589d406ae33ec4985f956b527764a49509809ac8a3e087adae31f4f848a5d"
+      "bytes": 1409220,
+      "sha256": "3142450d89ea35277d9b0bbef8f1b658a6ae713a2c4686fc0f4db9810b2b5371"
     },
     {
       "path": "04_完整演示/README.md",
-      "bytes": 1911,
-      "sha256": "e04d4d3d437d06004bc80b340255ee185e6c76ce67407c1f1f309e59fb1296cc"
+      "bytes": 1924,
+      "sha256": "8fa57a4c89146506afd6d18e0317e040d34a07ad4fca0265036185c10511cc0b"
     },
     {
       "path": "04_完整演示/app.js",
-      "bytes": 37973,
-      "sha256": "f06693c534efd26b0c38581ada47c752a05d86b488f31bf6a9ff3f12693a968e"
+      "bytes": 37963,
+      "sha256": "166cfec286711d76d1d1079f26546c4af618c1dff8b033830193b8076361cd65"
     },
     {
       "path": "04_完整演示/app_template.js",
-      "bytes": 37973,
-      "sha256": "f06693c534efd26b0c38581ada47c752a05d86b488f31bf6a9ff3f12693a968e"
+      "bytes": 37963,
+      "sha256": "166cfec286711d76d1d1079f26546c4af618c1dff8b033830193b8076361cd65"
     },
     {
       "path": "04_完整演示/base.css",
@@ -717,13 +717,13 @@
     },
     {
       "path": "04_完整演示/build_demo.py",
-      "bytes": 8236,
-      "sha256": "2cdbed064b09d58f18780920d34a796512962516219d95a3f8d2f4c4ad4599ef"
+      "bytes": 8228,
+      "sha256": "eb66ba852712b30f65abd5bfb07f0d27f69b0fa73d8daf364534d97e92016b57"
     },
     {
       "path": "04_完整演示/build_manifest.json",
-      "bytes": 1138,
-      "sha256": "4d0e34e09aba4adefb9057f7a0ccf9e3018a4406b1f32832e0dd288864496b3a"
+      "bytes": 1134,
+      "sha256": "35209eea6e09c24238391bd13117faa7eb3332507b27e7e83fe8416500d32fa2"
     },
     {
       "path": "04_完整演示/data/anonymous_records.json",
@@ -782,18 +782,18 @@
     },
     {
       "path": "04_完整演示/template.html",
-      "bytes": 18895,
-      "sha256": "43814a16a5b189dd90287ccefad2a2b96dde8462969af0f8c1bac2cbffdaf506"
+      "bytes": 18889,
+      "sha256": "8bb93180a0ef1a189c0c2a40417a9394f122f36ea534519270a026bc3ace0538"
     },
     {
       "path": "04_完整演示/verify.cjs",
-      "bytes": 17256,
-      "sha256": "462047e1e9858de89834065da7f019ef022741ac69d25fad4d476bf596369b2b"
+      "bytes": 17299,
+      "sha256": "c525742a57f0844037762765dd20bcba3d04660ac7f8439e3bfa0e92880f4590"
     },
     {
       "path": "README.md",
-      "bytes": 4461,
-      "sha256": "b40176e8d7d885c5156f89dc318ede615d62199aad09e11f6cbe3c9f87e44496"
+      "bytes": 4449,
+      "sha256": "16eb2fab6ebfd6af286506d4c91d18e65ec46a23909e593828d199d2b2e0256b"
     },
     {
       "path": "docs/发布准备说明.md",
@@ -808,7 +808,7 @@
     {
       "path": "SHA256SUMS",
       "bytes": 18050,
-      "sha256": "7f1908797650bc38196aedc1756e602b812ab9cd3ec7da2a72732c52353ce1e0"
+      "sha256": "2c0cc79277a4333431b4a335d53da522ba99bdbea9ea364679e261f5498b6748"
     }
   ]
 }
