@@ -8,3 +8,9 @@ Thumbs.db
 *.tmp
 06_GitHub发布准备/
 .openecg-package-state.json
+
+04_完整演示/*.pdf
+04_完整演示/*.tmp
+04_完整演示/replay-*.json
+/selected-input.json
+/replay-*.json

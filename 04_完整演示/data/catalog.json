@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "privateSelectableEntries": 5,
+  "uniqueMeasurements": 5,
+  "records": [
+    {
+      "id": "applewatch-a",
+      "record": "A",
+      "windowSec": [
+        20,
+        30
+      ],
+      "inputFile": "data/inputs/applewatch-a.json"
+    },
+    {
+      "id": "applewatch-b",
+      "record": "B",
+      "windowSec": [
+        10,
+        20
+      ],
+      "inputFile": "data/inputs/applewatch-b.json"
+    },
+    {
+      "id": "applewatch-c",
+      "record": "C",
+      "windowSec": [
+        10,
+        20
+      ],
+      "inputFile": "data/inputs/applewatch-c.json"
+    },
+    {
+      "id": "applewatch-d",
+      "record": "D",
+      "windowSec": [
+        10.0,
+        20.0
+      ],
+      "inputFile": "data/inputs/applewatch-d.json"
+    },
+    {
+      "id": "applewatch-e",
+      "record": "E",
+      "windowSec": [
+        10.0,
+        20.0
+      ],
+      "inputFile": "data/inputs/applewatch-e.json"
+    }
+  ]
+}

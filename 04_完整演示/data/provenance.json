@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "recordCount": 5,
+  "uniqueMeasurements": 5,
+  "sourceKind": "pdf-vector-reconstruction",
+  "model": {
+    "status": "identified",
+    "files": [
+      {
+        "attribute": "detector.path",
+        "filename": "boundary_int8.tflite",
+        "bytes": 1480128,
+        "sha256": "2e130ed795491764ffa4f7eff5decc06a4531ac69e1cab51bfbffa714bc0b3fb"
+      }
+    ],
+    "reason": null
+  },
+  "records": [
+    {
+      "id": "applewatch-a",
+      "windowSec": [
+        20,
+        30
+      ],
+      "inputPath": "data/inputs/applewatch-a.json",
+      "inputSha256": "ac65e3b384d07682e967aa0287e38f1ccf65794403897b57b1a732519a64aa71",
+      "inputFloat64LeSha256": "c90cef2f94b43d0455bca1b6b3d23215ccf3ebad6dc8937732c2187b1bbf2ca7",
+      "inputSamples": 5120,
+      "outputSamples": 2500
+    },
+    {
+      "id": "applewatch-b",
+      "windowSec": [
+        10,
+        20
+      ],
+      "inputPath": "data/inputs/applewatch-b.json",
+      "inputSha256": "533b38ab1437cf8519393d0eac8af7dbacfeec3f566b1f5350b5e591887afa3b",
+      "inputFloat64LeSha256": "6891828cc972ffa9dd07d35b6357cbbe4e401c286b54b8a862d3414c6883ee0d",
+      "inputSamples": 5120,
+      "outputSamples": 2500
+    },
+    {
+      "id": "applewatch-c",
+      "windowSec": [
+        10,
+        20
+      ],
+      "inputPath": "data/inputs/applewatch-c.json",
+      "inputSha256": "01ac751ce0a68033465693ea37d84b6388ca1d5676116a8ea6a9bc8bb1187570",
+      "inputFloat64LeSha256": "ab9aa3ea4e66bd2ce5e0a0be0e6c8133bc9938348245baebe779f0747fac8f65",
+      "inputSamples": 5120,
+      "outputSamples": 2500
+    },
+    {
+      "id": "applewatch-d",
+      "windowSec": [
+        10.0,
+        20.0
+      ],
+      "inputPath": "data/inputs/applewatch-d.json",
+      "inputSha256": "efd68cab75d5f10ebb809459cfb3205532ffde06a8731ff99a382fb3aa0355c0",
+      "inputFloat64LeSha256": "682ff6daab683d7b2207078c73f097062aa8e6624da2c5f7c15a0d62c2eded90",
+      "inputSamples": 5120,
+      "outputSamples": 2500
+    },
+    {
+      "id": "applewatch-e",
+      "windowSec": [
+        10.0,
+        20.0
+      ],
+      "inputPath": "data/inputs/applewatch-e.json",
+      "inputSha256": "698b0d526b07af3b963442863c6957207e32090ff62bbeed909d5287d3d81b5b",
+      "inputFloat64LeSha256": "f431ba846021c25091e0561405606f2eb5ee24edd4581b591f8ecb91c8d07442",
+      "inputSamples": 5120,
+      "outputSamples": 2500
+    }
+  ],
+  "frozenResultsSha256": "3cea8cc65bf158d0cf0c33f3f8cb2118f9b7ad32e4dc369e92a982b35295b3df"
+}

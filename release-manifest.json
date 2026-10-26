@@ -1,17 +1,24 @@
 {
-  "schema": "openecg-whitelist-package-v1",
-  "scope": "static demo and frozen-output analysis; no upload or publication performed",
-  "checksumRule": "files lists every packaged file except release-manifest.json; SHA256SUMS excludes itself and release-manifest.json",
-  "validationStatus": "packaging integrity only; run release_static.py and assess browser/public checks separately",
-  "optionalModelGenerationManifestIncluded": true,
-  "optionalModelReplayAuditIncluded": true,
-  "optionalGenerationHistoryIncluded": true,
-  "priorFourteenRecordPreservationGuardIncluded": true,
+  "schema": "openecg-private-25-record-release-v1",
+  "recordCount": 25,
+  "sourceCounts": {
+    "LUDB": 10,
+    "QTDB": 10,
+    "APPLEWATCH": 5
+  },
+  "entryPoint": "04_完整演示/OpenECG_Demo.html",
+  "visibility": "private",
+  "modelInferenceExecuted": false,
   "files": [
     {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
       "path": ".gitignore",
-      "bytes": 119,
-      "sha256": "f293cd238aaed24b226d710f8057dfa91ea056ec44b2e9561ed5358df5d41770"
+      "bytes": 230,
+      "sha256": "5786b1cab53d70d0e93672d871f5c7ee27aec6a49c5d983f8e3416b9c4644dcb"
     },
     {
       "path": "01_离线演示/OpenECG_Demo.html",
@@ -684,14 +691,109 @@
       "sha256": "c4d851f85d63745684e701e90237bedf0cb4ccc6a8670054815958219645401e"
     },
     {
-      "path": "README.md",
-      "bytes": 8389,
-      "sha256": "3b8f9285bbf0249cf0c06d64b5fe5f5821f6f27aa5b540cbcca79a9accba78a0"
+      "path": "04_完整演示/OpenECG_Demo.html",
+      "bytes": 1409196,
+      "sha256": "3b1a12b7602e771f266c7498663aa18cd47774685ee1bfe85bb7ecfbc5679381"
     },
     {
-      "path": "SHA256SUMS",
-      "bytes": 15942,
-      "sha256": "b00ccb0cc144bd07445a7a3724a07a5d3e457408fdd15b817c1ea76321ff6c18"
+      "path": "04_完整演示/README.md",
+      "bytes": 1890,
+      "sha256": "290ef872509c2357a461428ed4e7a30713b22e007832d6933d0a18b07477c8ef"
+    },
+    {
+      "path": "04_完整演示/app.js",
+      "bytes": 37962,
+      "sha256": "952fdd3178da6e647be5345cbe6bc97230275975733918519cd6f62ba612cfae"
+    },
+    {
+      "path": "04_完整演示/app_template.js",
+      "bytes": 37962,
+      "sha256": "952fdd3178da6e647be5345cbe6bc97230275975733918519cd6f62ba612cfae"
+    },
+    {
+      "path": "04_完整演示/base.css",
+      "bytes": 15097,
+      "sha256": "a288aebd9336b799cf3418e08195e4d9495a0bba23a678f91b2f813efb8efbfa"
+    },
+    {
+      "path": "04_完整演示/build_demo.py",
+      "bytes": 8227,
+      "sha256": "89ff07dfadbbc3b7dbf67f60aa9addbfc19daf2bdaabb9695eb25a6911850be2"
+    },
+    {
+      "path": "04_完整演示/build_manifest.json",
+      "bytes": 1139,
+      "sha256": "84afb107dabfdaab56140b0f92a5e5d4fc5be147b4f73198bd7ded4b23279c35"
+    },
+    {
+      "path": "04_完整演示/data/applewatch_model_results.json",
+      "bytes": 456122,
+      "sha256": "3cea8cc65bf158d0cf0c33f3f8cb2118f9b7ad32e4dc369e92a982b35295b3df"
+    },
+    {
+      "path": "04_完整演示/data/catalog.json",
+      "bytes": 994,
+      "sha256": "9c620bc8da996b9b775666d9eb7a8a6d83be0b086a2b720b9f345b29294b0e66"
+    },
+    {
+      "path": "04_完整演示/data/inputs/applewatch-a.json",
+      "bytes": 102744,
+      "sha256": "ac65e3b384d07682e967aa0287e38f1ccf65794403897b57b1a732519a64aa71"
+    },
+    {
+      "path": "04_完整演示/data/inputs/applewatch-b.json",
+      "bytes": 102852,
+      "sha256": "533b38ab1437cf8519393d0eac8af7dbacfeec3f566b1f5350b5e591887afa3b"
+    },
+    {
+      "path": "04_完整演示/data/inputs/applewatch-c.json",
+      "bytes": 102867,
+      "sha256": "01ac751ce0a68033465693ea37d84b6388ca1d5676116a8ea6a9bc8bb1187570"
+    },
+    {
+      "path": "04_完整演示/data/inputs/applewatch-d.json",
+      "bytes": 102628,
+      "sha256": "efd68cab75d5f10ebb809459cfb3205532ffde06a8731ff99a382fb3aa0355c0"
+    },
+    {
+      "path": "04_完整演示/data/inputs/applewatch-e.json",
+      "bytes": 102647,
+      "sha256": "698b0d526b07af3b963442863c6957207e32090ff62bbeed909d5287d3d81b5b"
+    },
+    {
+      "path": "04_完整演示/data/provenance.json",
+      "bytes": 2559,
+      "sha256": "9b17ab4d67af38e97e085949d94b0aaa11fde7106796d42e9138c34160154114"
+    },
+    {
+      "path": "04_完整演示/extract_pdf_vectors.py",
+      "bytes": 8511,
+      "sha256": "0ad8a7ce0b224b53b3bbd7dc998b8cdd6641cfa5d396f4d1c1c41e41d9b36dbe"
+    },
+    {
+      "path": "04_完整演示/prepare_applewatch.py",
+      "bytes": 2974,
+      "sha256": "a7f49d48b4fad66ca2dcb16a225c3225f238a78b2c20c30ce4305e67b125a9ea"
+    },
+    {
+      "path": "04_完整演示/release.py",
+      "bytes": 2433,
+      "sha256": "5c04c50d9114da0c168e0f25e2eaf2ba73e81d3cb1838906f62ca5ca6f77f942"
+    },
+    {
+      "path": "04_完整演示/template.html",
+      "bytes": 18901,
+      "sha256": "540ea4a9075cea073fbaaffbfdb71c9e7a0f1fac355c3e15f3e174816024b994"
+    },
+    {
+      "path": "04_完整演示/verify.cjs",
+      "bytes": 17283,
+      "sha256": "857a051a08e7b6313bf73389637938c6f5a7be7ee009fcfcaff36c0909a0ec6a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4332,
+      "sha256": "0af2a8ee9eaa65f196615d5212b3ba16619aed8e7ef0b1201147b48729e58d01"
     },
     {
       "path": "docs/发布准备说明.md",
@@ -702,6 +804,11 @@
       "path": "docs/来源与许可说明.md",
       "bytes": 3192,
       "sha256": "4eed2be98fca9c569a713d46fd3da184394eca5c4a2192e653bd480105d36a5a"
+    },
+    {
+      "path": "SHA256SUMS",
+      "bytes": 18062,
+      "sha256": "2d2d32efa1add596202004e2f636fe7b7b90f248b55456d383ffaef269f7c81f"
     }
   ]
 }
