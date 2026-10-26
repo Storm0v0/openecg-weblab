@@ -792,8 +792,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4359,
-      "sha256": "84aa748d3e9bd64cd3a5314854c40bb036d36c0e3fa0438c787fbf00bc6044c2"
+      "bytes": 4412,
+      "sha256": "0ad759b6e20519a82221dca89d84bc4ae9a0e151b4efda1a9493c711f2183998"
     },
     {
       "path": "docs/发布准备说明.md",
@@ -808,7 +808,7 @@
     {
       "path": "SHA256SUMS",
       "bytes": 18050,
-      "sha256": "612c9276c640e8b2eb9de5b7b506dfe8c221100035a63e0f3b35de2126dd771a"
+      "sha256": "f16f1a2269643bb9e3122032b1b7a5a7ecfe1bc2dcc91780e082b7ed11042eb6"
     }
   ]
 }
