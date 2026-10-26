@@ -155,7 +155,7 @@ def main() -> None:
         signal = [points[i] for i in range(start,start+10*FS)]
     except KeyError as exc:
         raise ValueError('The selected 10-second window includes missing PDF points') from exc
-    output = {'id':'applewatch-'+args.record.lower(),'sourceKind':'pdf-vector-reconstruction',
+    output = {'id':'anonymous-'+args.record.lower(),'sourceKind':'pdf-vector-reconstruction',
               'fs':FS,'unit':'mV-relative','windowSec':[args.start,args.start+10],'signal':signal}
     args.output.write_text(json.dumps(output,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
     print('Extracted one complete 10-second window: '+str(args.output))

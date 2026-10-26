@@ -1,10 +1,10 @@
 [
   {
-    "id": "applewatch-a",
+    "id": "anonymous-a",
     "dataset": "APPLEWATCH",
     "record": "A",
     "lead": "I",
-    "label": "Apple Watch PDF A",
+    "label": "匿名记录 A",
     "fs": 250,
     "sourceFs": 512,
     "startSec": 20,
@@ -5245,7 +5245,7 @@
     "coursework": {
       "protocolVersion": "coursework-v1",
       "implementationRevision": "20261018-measurement-fixes",
-      "recordId": "applewatch-a",
+      "recordId": "anonymous-a",
       "protocol": {
         "matchCenterLimitMs": 150.0,
         "positiveOverlapRequired": true,
@@ -5497,11 +5497,11 @@
     }
   },
   {
-    "id": "applewatch-b",
+    "id": "anonymous-b",
     "dataset": "APPLEWATCH",
     "record": "B",
     "lead": "I",
-    "label": "Apple Watch PDF B",
+    "label": "匿名记录 B",
     "fs": 250,
     "sourceFs": 512,
     "startSec": 10,
@@ -10759,7 +10759,7 @@
     "coursework": {
       "protocolVersion": "coursework-v1",
       "implementationRevision": "20261018-measurement-fixes",
-      "recordId": "applewatch-b",
+      "recordId": "anonymous-b",
       "protocol": {
         "matchCenterLimitMs": 150.0,
         "positiveOverlapRequired": true,
@@ -11023,11 +11023,11 @@
     }
   },
   {
-    "id": "applewatch-c",
+    "id": "anonymous-c",
     "dataset": "APPLEWATCH",
     "record": "C",
     "lead": "I",
-    "label": "Apple Watch PDF C",
+    "label": "匿名记录 C",
     "fs": 250,
     "sourceFs": 512,
     "startSec": 10,
@@ -16282,7 +16282,7 @@
     "coursework": {
       "protocolVersion": "coursework-v1",
       "implementationRevision": "20261018-measurement-fixes",
-      "recordId": "applewatch-c",
+      "recordId": "anonymous-c",
       "protocol": {
         "matchCenterLimitMs": 150.0,
         "positiveOverlapRequired": true,
@@ -16546,11 +16546,11 @@
     }
   },
   {
-    "id": "applewatch-d",
+    "id": "anonymous-d",
     "dataset": "APPLEWATCH",
     "record": "D",
     "lead": "I",
-    "label": "Apple Watch PDF D",
+    "label": "匿名记录 D",
     "fs": 250,
     "sourceFs": 512,
     "startSec": 10.0,
@@ -21808,7 +21808,7 @@
     "coursework": {
       "protocolVersion": "coursework-v1",
       "implementationRevision": "20261018-measurement-fixes",
-      "recordId": "applewatch-d",
+      "recordId": "anonymous-d",
       "protocol": {
         "matchCenterLimitMs": 150.0,
         "positiveOverlapRequired": true,
@@ -22072,11 +22072,11 @@
     }
   },
   {
-    "id": "applewatch-e",
+    "id": "anonymous-e",
     "dataset": "APPLEWATCH",
     "record": "E",
     "lead": "I",
-    "label": "Apple Watch PDF E",
+    "label": "匿名记录 E",
     "fs": 250,
     "sourceFs": 512,
     "startSec": 10.0,
@@ -27332,7 +27332,7 @@
     "coursework": {
       "protocolVersion": "coursework-v1",
       "implementationRevision": "20261018-measurement-fixes",
-      "recordId": "applewatch-e",
+      "recordId": "anonymous-e",
       "protocol": {
         "matchCenterLimitMs": 150.0,
         "positiveOverlapRequired": true,

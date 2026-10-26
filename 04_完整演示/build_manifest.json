@@ -1,32 +1,32 @@
 {
-  "scope": "private local preview only",
+  "scope": "public 25-record demonstration",
   "recordCount": 25,
   "sourceCounts": {
     "LUDB": 10,
     "QTDB": 10,
     "APPLEWATCH": 5
   },
-  "privateUniqueMeasurements": 5,
-  "defaultRecord": "applewatch-a",
+  "anonymousUniqueMeasurements": 5,
+  "defaultRecord": "anonymous-a",
   "modelInferenceExecuted": false,
-  "privateSourceWindowsSec": {
-    "applewatch-a": [
+  "anonymousSourceWindowsSec": {
+    "anonymous-a": [
       20,
       30
     ],
-    "applewatch-b": [
+    "anonymous-b": [
       10,
       20
     ],
-    "applewatch-c": [
+    "anonymous-c": [
       10,
       20
     ],
-    "applewatch-d": [
+    "anonymous-d": [
       10.0,
       20.0
     ],
-    "applewatch-e": [
+    "anonymous-e": [
       10.0,
       20.0
     ]
@@ -34,12 +34,12 @@
   "frozenValuesPreserved": true,
   "publicPayloadSource": "01_离线演示/OpenECG_Demo.html",
   "publicPayloadSourceSha256": "8577d5306e1ad90a1f74f4fca54cb9ebb2026dfb22ef92d2cfa7110e36ae2274",
-  "privatePayloadSource": "data/applewatch_model_results.json",
-  "privatePayloadSourceSha256": "3cea8cc65bf158d0cf0c33f3f8cb2118f9b7ad32e4dc369e92a982b35295b3df",
+  "anonymousPayloadSource": "data/anonymous_records.json",
+  "anonymousPayloadSourceSha256": "3587a80392bef21f6c8e2371d65c5931c65bd948190ef9bd80066b0d95d72bf9",
   "publishedToCloud": false,
   "uploadedToGitHub": false,
   "outputs": {
-    "app.js": "952fdd3178da6e647be5345cbe6bc97230275975733918519cd6f62ba612cfae",
-    "OpenECG_Demo.html": "3b1a12b7602e771f266c7498663aa18cd47774685ee1bfe85bb7ecfbc5679381"
+    "app.js": "b43440bd2e288b76687b4efdcc3653373a6479cfbda1e813ab7232ed8243be0b",
+    "OpenECG_Demo.html": "a4c99dd4c3f0dacc78874e7d7e2343213ce9960ba7ab193ddefffcc01bec569e"
   }
 }

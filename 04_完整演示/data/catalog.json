@@ -1,52 +1,52 @@
 {
   "schemaVersion": 1,
-  "privateSelectableEntries": 5,
   "uniqueMeasurements": 5,
   "records": [
     {
-      "id": "applewatch-a",
+      "id": "anonymous-a",
       "record": "A",
       "windowSec": [
         20,
         30
       ],
-      "inputFile": "data/inputs/applewatch-a.json"
+      "inputFile": "data/inputs/anonymous-a.json"
     },
     {
-      "id": "applewatch-b",
+      "id": "anonymous-b",
       "record": "B",
       "windowSec": [
         10,
         20
       ],
-      "inputFile": "data/inputs/applewatch-b.json"
+      "inputFile": "data/inputs/anonymous-b.json"
     },
     {
-      "id": "applewatch-c",
+      "id": "anonymous-c",
       "record": "C",
       "windowSec": [
         10,
         20
       ],
-      "inputFile": "data/inputs/applewatch-c.json"
+      "inputFile": "data/inputs/anonymous-c.json"
     },
     {
-      "id": "applewatch-d",
+      "id": "anonymous-d",
       "record": "D",
       "windowSec": [
         10.0,
         20.0
       ],
-      "inputFile": "data/inputs/applewatch-d.json"
+      "inputFile": "data/inputs/anonymous-d.json"
     },
     {
-      "id": "applewatch-e",
+      "id": "anonymous-e",
       "record": "E",
       "windowSec": [
         10.0,
         20.0
       ],
-      "inputFile": "data/inputs/applewatch-e.json"
+      "inputFile": "data/inputs/anonymous-e.json"
     }
-  ]
+  ],
+  "anonymousSelectableEntries": 5
 }

@@ -5,7 +5,7 @@ const local=__dirname,root=path.dirname(local),read=name=>fs.readFileSync(path.j
 const html=read('OpenECG_Demo.html');
 const embedded=text=>JSON.parse(text.match(/<script type="application\/json" id="demo-data">([\s\S]*?)<\/script>/)[1]);
 const data=embedded(html),publicData=embedded(fs.readFileSync(path.join(root,'01_离线演示/OpenECG_Demo.html'),'utf8'));
-const privateData=JSON.parse(read('data/applewatch_model_results.json'));
+const privateData=JSON.parse(read('data/anonymous_records.json'));
 const sha256=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 function checkHasWindow(text,d,label){
  const end=d.startSec+d.raw.length/d.fs;
@@ -31,9 +31,9 @@ assert.equal(data.length,25);assert.equal(new Set(data.map(d=>d.id)).size,25);
 for(const source of sources)assert.equal(data.filter(d=>d.dataset===source).length,counts[source],source+' count');
 assert.deepStrictEqual(data.filter(d=>d.dataset!=='APPLEWATCH'),publicData,'20 public payloads unchanged');
 for(const frozen of privateData)assert.deepStrictEqual(data.find(d=>d.id===frozen.id),frozen,frozen.id+' frozen model result unchanged');
-assert.deepStrictEqual(privateData.map(d=>d.id),['applewatch-a','applewatch-b','applewatch-c','applewatch-d','applewatch-e']);
+assert.deepStrictEqual(privateData.map(d=>d.id),['anonymous-a','anonymous-b','anonymous-c','anonymous-d','anonymous-e']);
 const catalog=JSON.parse(read('data/catalog.json'));
-assert.equal(catalog.privateSelectableEntries,5);assert.equal(catalog.uniqueMeasurements,5);
+assert.equal(catalog.anonymousSelectableEntries,5);assert.equal(catalog.uniqueMeasurements,5);
 assert.deepStrictEqual(catalog.records.map(d=>d.id),privateData.map(d=>d.id));
 assert(html.includes('本地')&&html.includes('PDF')&&html.includes('重建'));
 assert(!/<(?:script|link|img|iframe|audio|video|source|object|embed)\b[^>]*(?:src|href|data)=["'](?:https?:)?\/\//i.test(html),'no automatic remote resources');
@@ -45,7 +45,7 @@ for(const d of privateData){
  assert.deepStrictEqual(Object.keys(d).sort(),allowedPrivateKeys.slice().sort(),'private record metadata whitelist');
  assert.equal(d.fs,250);assert.equal(d.sourceFs,512);assert(Number.isFinite(d.startSec)&&d.startSec>=0);assert.equal(d.lead,'I');
  assert.deepStrictEqual(d.pdfReconstruction.windowSec,[d.startSec,d.startSec+d.raw.length/d.fs],'PDF window matches actual record metadata');
- if(d.id==='applewatch-b')assert.equal(d.startSec,10,'B original window unchanged');
+ if(d.id==='anonymous-b')assert.equal(d.startSec,10,'B original window unchanged');
  assert.equal(d.raw.length,2500);assert.equal(d.filtered.length,2500);assert(d.raw.every(Number.isFinite)&&d.filtered.every(Number.isFinite));
  assert(d.model.includes('openecg 0.11.0')&&d.model.includes('PDF'));assert(d.waves.length>0&&d.rPeaks.length>1);
  assert.equal(d.groundTruth.length,0);assert.equal(d.coursework.comparison.rows.length,0);
@@ -58,7 +58,7 @@ for(const d of privateData){
 }
 const provenance=JSON.parse(read('data/provenance.json'));
 assert.equal(provenance.recordCount,5);assert.equal(provenance.uniqueMeasurements,5);
-assert.equal(sha256(Buffer.from(read('data/applewatch_model_results.json'))),provenance.frozenResultsSha256);
+assert.equal(sha256(Buffer.from(read('data/anonymous_records.json'))),provenance.frozenResultsSha256);
 assert(provenance.model.files.some(f=>f.sha256==='2e130ed795491764ffa4f7eff5decc06a4531ac69e1cab51bfbffa714bc0b3fb'));
 for(const entry of provenance.records){
  const source=JSON.parse(read(entry.inputPath)),d=privateData.find(r=>r.id===entry.id);
@@ -115,7 +115,7 @@ function assertUnavailable(d){
  assert(ids.get('comparison-status').textContent.includes('人工'));
 }
 (async()=>{
- await idle();assert.equal(api.state.current.id,'applewatch-a');assert.equal(api.state.source,'APPLEWATCH');assertSourceOptions('APPLEWATCH');
+ await idle();assert.equal(api.state.current.id,'anonymous-a');assert.equal(api.state.source,'APPLEWATCH');assertSourceOptions('APPLEWATCH');
  assert(ids.get('record-title').textContent.includes('A'));assertUnavailable(api.state.current);
  const fullRange=api.state.range.join(',');let ordinaryPrevented=false,ctrlPrevented=false;
  ids.get('plot').handlers.wheel({deltaY:-100,clientX:500,ctrlKey:false,preventDefault(){ordinaryPrevented=true;}});assert.equal(ordinaryPrevented,false);assert.equal(api.state.range.join(','),fullRange);
@@ -129,7 +129,7 @@ function assertUnavailable(d){
    checkHasWindow(ids.get('record-meta').textContent,d,'metadata '+d.id);
    checkHasWindow(ids.get('applewatch-window-method').textContent,d,'window method '+d.id);
    assert(/重建/.test(ids.get('raw').textContent),'private raw button identifies reconstruction');
-   if(d.id==='applewatch-c')assert(!ids.get('record-title').textContent.includes('重复'),'new C title has no stale duplicate marker');
+   if(d.id==='anonymous-c')assert(!ids.get('record-title').textContent.includes('重复'),'new C title has no stale duplicate marker');
   }
   const allRows=[['export-wave',api.waveRows(d)],['export-beats',api.beatRows(d)],['export-qrs',api.qrsRows(d)],['export-comparison',api.comparisonRows(d)],['export-summary',api.summaryRows(d)]];
   for(const [id,rows] of allRows){assert(!/NaN|undefined|Infinity/.test(rows.join('\n')));const width=rows[0].split(',').length;assert(rows.every(r=>r.split(',').length===width));const before=downloads.length;ids.get(id).click();assert.equal(downloads.length,before+1);assert.equal((await downloads.at(-1).text()).replace(/^\uFEFF/,''),rows.join('\r\n'));}
@@ -138,24 +138,24 @@ function assertUnavailable(d){
   if(d.groundTruth.length){assert(api.focusExample('comparison'));assert(api.state.truth);assert(ids.get('plot').innerHTML.includes('data-focused="reference"'));}else assertUnavailable(d);
   const svg=api.waveformSvg();assert(svg.includes(d.id));assert(!/<script\b|NaN|undefined|Infinity/.test(svg));const svgCount=downloads.length;ids.get('export-svg').click();assert.equal(downloads.length,svgCount+1);assert.equal(await downloads.at(-1).text(),svg);
   if(d.dataset==='APPLEWATCH')checkHasWindow(svg,d,'SVG '+d.id);
-  if(d.id==='applewatch-c')assert(!svg.includes('重复导出'),'new C SVG has no stale duplicate marker');
+  if(d.id==='anonymous-c')assert(!svg.includes('重复导出'),'new C SVG has no stale duplicate marker');
   const note=api.summaryNote();assert(note.includes(d.id)&&note.includes(d.model));assert(note.includes('QRS 时限')&&note.includes('模型边界步进约 20 毫秒'));
   if(d.dataset==='APPLEWATCH'){assert(/PDF/.test(note)&&/重建/.test(note)&&/相对/.test(note));checkHasWindow(note,d,'TXT '+d.id);}
-  if(d.id==='applewatch-c')assert(!note.includes('重复关系'),'new C TXT has no stale duplicate marker');
+  if(d.id==='anonymous-c')assert(!note.includes('重复关系'),'new C TXT has no stale duplicate marker');
   const count=downloads.length;ids.get('export-note').click();assert.equal(downloads.length,count+1);assert.equal((await downloads.at(-1).text()).replace(/^\uFEFF/,''),note);
   api.setRange(1,2);ids.get('comparison-kind').value='T';ids.get('comparison-kind').handlers.change();ids.get('comparison-issues').checked=true;ids.get('comparison-issues').handlers.change();assert.equal(api.summaryNote(),note,'export scope unaffected by zoom/filter');
   api.reset();const range=api.state.range.join(',');assert.equal(api.setRange(NaN,3),false);assert.equal(api.state.range.join(','),range);assert.equal(api.zoom(0,3),false);
   console.log(d.id,'auto-load, frozen model, shared Y, controls and CSV/SVG/TXT passed');
  }
  // Re-entering the personal source picks A, and choosing B starts loading itself.
- tabs[0].click();await idle();tabs[2].click();assertCleared();await idle();assert.equal(api.state.current.id,'applewatch-a');
- await choose(data.find(d=>d.id==='applewatch-b'));assertUnavailable(api.state.current);
+ tabs[0].click();await idle();tabs[2].click();assertCleared();await idle();assert.equal(api.state.current.id,'anonymous-a');
+ await choose(data.find(d=>d.id==='anonymous-b'));assertUnavailable(api.state.current);
  // Keyboard navigation reaches every source, including the third tab.
  tabs[2].focus();tablist.handlers.keydown({key:'ArrowRight',preventDefault(){}});await idle();assert.equal(api.state.source,'LUDB');
- tablist.handlers.keydown({key:'End',preventDefault(){}});await idle();assert.equal(api.state.source,'APPLEWATCH');assert.equal(api.state.current.id,'applewatch-a');
- const original=api.records.find(d=>d.id==='applewatch-a'),index=api.records.indexOf(original),broken=plain(original);broken.coursework.comparison.summaries[0].pairingRatePct=100;
+ tablist.handlers.keydown({key:'End',preventDefault(){}});await idle();assert.equal(api.state.source,'APPLEWATCH');assert.equal(api.state.current.id,'anonymous-a');
+ const original=api.records.find(d=>d.id==='anonymous-a'),index=api.records.indexOf(original),broken=plain(original);broken.coursework.comparison.summaries[0].pairingRatePct=100;
  assert.throws(()=>api.validate(broken));api.records[index]=broken;api.state.selected=broken.id;await api.load();assert.equal(api.state.current,null);assert.equal(ids.get('error').hidden,false);assert(ids.get('export-note').disabled);api.records[index]=original;
- await choose(data.find(d=>d.id==='applewatch-b'));assertUnavailable(api.state.current);
+ await choose(data.find(d=>d.id==='anonymous-b'));assertUnavailable(api.state.current);
  console.log('PASS: 25 local records; 20 public and 5 Apple Watch frozen results; source inputs, GitHub link, controls, CSV/SVG/TXT, no-GT metrics and recovery.');
  console.log('Scope: simulated DOM/data/package checks only; no browser visual QA, model rerun, upload or cloud publication.');
 })().catch(error=>{console.error(error);process.exitCode=1;});

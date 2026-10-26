@@ -17,65 +17,65 @@
   },
   "records": [
     {
-      "id": "applewatch-a",
+      "id": "anonymous-a",
       "windowSec": [
         20,
         30
       ],
-      "inputPath": "data/inputs/applewatch-a.json",
-      "inputSha256": "ac65e3b384d07682e967aa0287e38f1ccf65794403897b57b1a732519a64aa71",
+      "inputPath": "data/inputs/anonymous-a.json",
+      "inputSha256": "9aafa689f23edc535c2818abaf34c326c5334b8afc43353e854cde104381f780",
       "inputFloat64LeSha256": "c90cef2f94b43d0455bca1b6b3d23215ccf3ebad6dc8937732c2187b1bbf2ca7",
       "inputSamples": 5120,
       "outputSamples": 2500
     },
     {
-      "id": "applewatch-b",
+      "id": "anonymous-b",
       "windowSec": [
         10,
         20
       ],
-      "inputPath": "data/inputs/applewatch-b.json",
-      "inputSha256": "533b38ab1437cf8519393d0eac8af7dbacfeec3f566b1f5350b5e591887afa3b",
+      "inputPath": "data/inputs/anonymous-b.json",
+      "inputSha256": "be3b1c51ac9e91fd5fb4a9681164a869036f93ee1517296a137fae2bfc0df23b",
       "inputFloat64LeSha256": "6891828cc972ffa9dd07d35b6357cbbe4e401c286b54b8a862d3414c6883ee0d",
       "inputSamples": 5120,
       "outputSamples": 2500
     },
     {
-      "id": "applewatch-c",
+      "id": "anonymous-c",
       "windowSec": [
         10,
         20
       ],
-      "inputPath": "data/inputs/applewatch-c.json",
-      "inputSha256": "01ac751ce0a68033465693ea37d84b6388ca1d5676116a8ea6a9bc8bb1187570",
+      "inputPath": "data/inputs/anonymous-c.json",
+      "inputSha256": "5b3e275361f2d31e63b0fbd65558d1873b7af3c2161c3eeb2c9eb91cbfa0e59a",
       "inputFloat64LeSha256": "ab9aa3ea4e66bd2ce5e0a0be0e6c8133bc9938348245baebe779f0747fac8f65",
       "inputSamples": 5120,
       "outputSamples": 2500
     },
     {
-      "id": "applewatch-d",
+      "id": "anonymous-d",
       "windowSec": [
         10.0,
         20.0
       ],
-      "inputPath": "data/inputs/applewatch-d.json",
-      "inputSha256": "efd68cab75d5f10ebb809459cfb3205532ffde06a8731ff99a382fb3aa0355c0",
+      "inputPath": "data/inputs/anonymous-d.json",
+      "inputSha256": "b56c4c8391c30b649472b0a7eaf6ed0d675159b6258bfff4072aa104af8e18bd",
       "inputFloat64LeSha256": "682ff6daab683d7b2207078c73f097062aa8e6624da2c5f7c15a0d62c2eded90",
       "inputSamples": 5120,
       "outputSamples": 2500
     },
     {
-      "id": "applewatch-e",
+      "id": "anonymous-e",
       "windowSec": [
         10.0,
         20.0
       ],
-      "inputPath": "data/inputs/applewatch-e.json",
-      "inputSha256": "698b0d526b07af3b963442863c6957207e32090ff62bbeed909d5287d3d81b5b",
+      "inputPath": "data/inputs/anonymous-e.json",
+      "inputSha256": "6ce85fc37636863edb168e9e86b36981c603d6473148ba7fd07141e636079e0d",
       "inputFloat64LeSha256": "f431ba846021c25091e0561405606f2eb5ee24edd4581b591f8ecb91c8d07442",
       "inputSamples": 5120,
       "outputSamples": 2500
     }
   ],
-  "frozenResultsSha256": "3cea8cc65bf158d0cf0c33f3f8cb2118f9b7ad32e4dc369e92a982b35295b3df"
+  "frozenResultsSha256": "3587a80392bef21f6c8e2371d65c5931c65bd948190ef9bd80066b0d95d72bf9"
 }

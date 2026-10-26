@@ -22,8 +22,8 @@ def main():
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError('Choose a new output path')
-    source = json.loads((HERE/f'data/inputs/applewatch-{args.record.lower()}.json').read_text(encoding='utf-8'))
-    frozen = json.loads((HERE/'data/applewatch_model_results.json').read_text(encoding='utf-8'))
+    source = json.loads((HERE/f'data/inputs/anonymous-{args.record.lower()}.json').read_text(encoding='utf-8'))
+    frozen = json.loads((HERE/'data/anonymous_records.json').read_text(encoding='utf-8'))
     record = copy.deepcopy(next(r for r in frozen if r['record'] == args.record))
     assert source['id'] == record['id'] and source['fs'] == 512
     assert source['sourceKind'] == 'pdf-vector-reconstruction'

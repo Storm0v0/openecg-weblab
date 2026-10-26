@@ -43,9 +43,9 @@ def write_manifest():
     checksum_path=ROOT/'SHA256SUMS'
     rows.append({'path':'SHA256SUMS','bytes':checksum_path.stat().st_size,
                  'sha256':hashlib.sha256(checksum_path.read_bytes()).hexdigest()})
-    manifest={'schema':'openecg-private-25-record-release-v1','recordCount':25,
+    manifest={'schema':'openecg-public-25-record-release-v1','recordCount':25,
         'sourceCounts':{'LUDB':10,'QTDB':10,'APPLEWATCH':5},
-        'entryPoint':'04_完整演示/OpenECG_Demo.html','visibility':'private',
+        'entryPoint':'04_完整演示/OpenECG_Demo.html','visibility':'public',
         'modelInferenceExecuted':False,'files':rows}
     (ROOT/'release-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 

@@ -1,4 +1,4 @@
-"""Build the private catalog page from frozen payloads, using only the standard library.
+"""Build the anonymous-record catalog page from frozen payloads, using only the standard library.
 
 No inference, reconstruction, public-project writes, server operations, or Git operations
 are performed. The historical two-record inference builder is a separate backup file.
@@ -15,7 +15,7 @@ import tempfile
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 PUBLIC_PAGE = ROOT / '01_离线演示' / 'OpenECG_Demo.html'
-PRIVATE_RESULTS = HERE / 'data/applewatch_model_results.json'
+PRIVATE_RESULTS = HERE / 'data/anonymous_records.json'
 PRIVATE_CATALOG = HERE / 'data/catalog.json'
 DATA_PATTERN = r'<script type="application/json" id="demo-data">([\s\S]*?)</script>'
 
@@ -36,7 +36,7 @@ def load_frozen_records():
     catalog = json.loads(PRIVATE_CATALOG.read_text(encoding='utf-8'))
     entries = catalog['records']
     if ([r.get('id') for r in private] != [r['id'] for r in entries]
-            or len(private) != catalog['privateSelectableEntries']
+            or len(private) != catalog['anonymousSelectableEntries']
             or len({r['id'] for r in private}) != len(private)):
         raise ValueError('Frozen private records must match the anonymous local catalog')
     allowed = {'id','dataset','record','lead','label','fs','sourceFs','startSec','unit',
@@ -123,24 +123,24 @@ def main():
     atomic_text(HERE / 'app.js', app)
     atomic_text(HERE / 'OpenECG_Demo.html', html)
     audit = {
-        'scope': 'private local preview only', 'recordCount': len(records),
+        'scope': 'public 25-record demonstration', 'recordCount': len(records),
         'sourceCounts': dict(Counter(r['dataset'] for r in records)),
-        'privateUniqueMeasurements': json.loads(PRIVATE_CATALOG.read_text(encoding='utf-8'))['uniqueMeasurements'],
-        'defaultRecord': 'applewatch-a', 'modelInferenceExecuted': False,
-        'privateSourceWindowsSec': {r['id']: r['pdfReconstruction']['windowSec']
+        'anonymousUniqueMeasurements': json.loads(PRIVATE_CATALOG.read_text(encoding='utf-8'))['uniqueMeasurements'],
+        'defaultRecord': 'anonymous-a', 'modelInferenceExecuted': False,
+        'anonymousSourceWindowsSec': {r['id']: r['pdfReconstruction']['windowSec']
                                     for r in records if r['dataset'] == 'APPLEWATCH'},
         'frozenValuesPreserved': True,
         'publicPayloadSource': '01_离线演示/OpenECG_Demo.html',
         'publicPayloadSourceSha256': sha256(PUBLIC_PAGE),
-        'privatePayloadSource': 'data/applewatch_model_results.json',
-        'privatePayloadSourceSha256': sha256(PRIVATE_RESULTS),
+        'anonymousPayloadSource': 'data/anonymous_records.json',
+        'anonymousPayloadSourceSha256': sha256(PRIVATE_RESULTS),
         'publishedToCloud': False, 'uploadedToGitHub': False,
         'outputs': {name: sha256(HERE/name) for name in ('app.js', 'OpenECG_Demo.html')},
     }
     atomic_text(HERE / 'build_manifest.json',
                 json.dumps(audit, ensure_ascii=False, indent=2) + '\n')
-    print(json.dumps({'status': 'built private local preview', 'recordCount': len(records),
-                     'sourceCounts': audit['sourceCounts'], 'defaultRecord': 'applewatch-a',
+    print(json.dumps({'status': 'built 25-record demonstration', 'recordCount': len(records),
+                     'sourceCounts': audit['sourceCounts'], 'defaultRecord': 'anonymous-a',
                      'inferenceExecuted': False, 'output': 'OpenECG_Demo.html'},
                      ensure_ascii=False))
 

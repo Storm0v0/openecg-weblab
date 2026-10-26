@@ -1,5 +1,5 @@
 {
-  "schema": "openecg-private-25-record-release-v1",
+  "schema": "openecg-public-25-record-release-v1",
   "recordCount": 25,
   "sourceCounts": {
     "LUDB": 10,
@@ -7,7 +7,7 @@
     "APPLEWATCH": 5
   },
   "entryPoint": "04_完整演示/OpenECG_Demo.html",
-  "visibility": "private",
+  "visibility": "public",
   "modelInferenceExecuted": false,
   "files": [
     {
@@ -692,23 +692,23 @@
     },
     {
       "path": "04_完整演示/OpenECG_Demo.html",
-      "bytes": 1409196,
-      "sha256": "3b1a12b7602e771f266c7498663aa18cd47774685ee1bfe85bb7ecfbc5679381"
+      "bytes": 1409166,
+      "sha256": "a4c99dd4c3f0dacc78874e7d7e2343213ce9960ba7ab193ddefffcc01bec569e"
     },
     {
       "path": "04_完整演示/README.md",
-      "bytes": 1890,
-      "sha256": "290ef872509c2357a461428ed4e7a30713b22e007832d6933d0a18b07477c8ef"
+      "bytes": 1886,
+      "sha256": "8e8cf7584983eb918ceced83aa8d040adf41617c00077efa4d287748aa80f960"
     },
     {
       "path": "04_完整演示/app.js",
       "bytes": 37962,
-      "sha256": "952fdd3178da6e647be5345cbe6bc97230275975733918519cd6f62ba612cfae"
+      "sha256": "b43440bd2e288b76687b4efdcc3653373a6479cfbda1e813ab7232ed8243be0b"
     },
     {
       "path": "04_完整演示/app_template.js",
       "bytes": 37962,
-      "sha256": "952fdd3178da6e647be5345cbe6bc97230275975733918519cd6f62ba612cfae"
+      "sha256": "b43440bd2e288b76687b4efdcc3653373a6479cfbda1e813ab7232ed8243be0b"
     },
     {
       "path": "04_完整演示/base.css",
@@ -717,83 +717,83 @@
     },
     {
       "path": "04_完整演示/build_demo.py",
-      "bytes": 8227,
-      "sha256": "89ff07dfadbbc3b7dbf67f60aa9addbfc19daf2bdaabb9695eb25a6911850be2"
+      "bytes": 8236,
+      "sha256": "2cdbed064b09d58f18780920d34a796512962516219d95a3f8d2f4c4ad4599ef"
     },
     {
       "path": "04_完整演示/build_manifest.json",
-      "bytes": 1139,
-      "sha256": "84afb107dabfdaab56140b0f92a5e5d4fc5be147b4f73198bd7ded4b23279c35"
+      "bytes": 1138,
+      "sha256": "92c0b014e78f79865191776e17189516a60343b34bae855f9af90c18b1a1ee56"
     },
     {
-      "path": "04_完整演示/data/applewatch_model_results.json",
-      "bytes": 456122,
-      "sha256": "3cea8cc65bf158d0cf0c33f3f8cb2118f9b7ad32e4dc369e92a982b35295b3df"
+      "path": "04_完整演示/data/anonymous_records.json",
+      "bytes": 456097,
+      "sha256": "3587a80392bef21f6c8e2371d65c5931c65bd948190ef9bd80066b0d95d72bf9"
     },
     {
       "path": "04_完整演示/data/catalog.json",
-      "bytes": 994,
-      "sha256": "9c620bc8da996b9b775666d9eb7a8a6d83be0b086a2b720b9f345b29294b0e66"
+      "bytes": 934,
+      "sha256": "b945557280d5f71f880c185d1e2a8a1c4c124137d8eaa95fcf1d2eed2b2286e5"
     },
     {
-      "path": "04_完整演示/data/inputs/applewatch-a.json",
-      "bytes": 102744,
-      "sha256": "ac65e3b384d07682e967aa0287e38f1ccf65794403897b57b1a732519a64aa71"
+      "path": "04_完整演示/data/inputs/anonymous-a.json",
+      "bytes": 102742,
+      "sha256": "9aafa689f23edc535c2818abaf34c326c5334b8afc43353e854cde104381f780"
     },
     {
-      "path": "04_完整演示/data/inputs/applewatch-b.json",
-      "bytes": 102852,
-      "sha256": "533b38ab1437cf8519393d0eac8af7dbacfeec3f566b1f5350b5e591887afa3b"
+      "path": "04_完整演示/data/inputs/anonymous-b.json",
+      "bytes": 102850,
+      "sha256": "be3b1c51ac9e91fd5fb4a9681164a869036f93ee1517296a137fae2bfc0df23b"
     },
     {
-      "path": "04_完整演示/data/inputs/applewatch-c.json",
-      "bytes": 102867,
-      "sha256": "01ac751ce0a68033465693ea37d84b6388ca1d5676116a8ea6a9bc8bb1187570"
+      "path": "04_完整演示/data/inputs/anonymous-c.json",
+      "bytes": 102865,
+      "sha256": "5b3e275361f2d31e63b0fbd65558d1873b7af3c2161c3eeb2c9eb91cbfa0e59a"
     },
     {
-      "path": "04_完整演示/data/inputs/applewatch-d.json",
-      "bytes": 102628,
-      "sha256": "efd68cab75d5f10ebb809459cfb3205532ffde06a8731ff99a382fb3aa0355c0"
+      "path": "04_完整演示/data/inputs/anonymous-d.json",
+      "bytes": 102626,
+      "sha256": "b56c4c8391c30b649472b0a7eaf6ed0d675159b6258bfff4072aa104af8e18bd"
     },
     {
-      "path": "04_完整演示/data/inputs/applewatch-e.json",
-      "bytes": 102647,
-      "sha256": "698b0d526b07af3b963442863c6957207e32090ff62bbeed909d5287d3d81b5b"
+      "path": "04_完整演示/data/inputs/anonymous-e.json",
+      "bytes": 102645,
+      "sha256": "6ce85fc37636863edb168e9e86b36981c603d6473148ba7fd07141e636079e0d"
     },
     {
       "path": "04_完整演示/data/provenance.json",
-      "bytes": 2559,
-      "sha256": "9b17ab4d67af38e97e085949d94b0aaa11fde7106796d42e9138c34160154114"
+      "bytes": 2468,
+      "sha256": "7c5d860c448d9f38b04a273ed6d908235e90255c08d48ba418fdcc560cf903e0"
     },
     {
       "path": "04_完整演示/extract_pdf_vectors.py",
-      "bytes": 8511,
-      "sha256": "0ad8a7ce0b224b53b3bbd7dc998b8cdd6641cfa5d396f4d1c1c41e41d9b36dbe"
+      "bytes": 8510,
+      "sha256": "ad5e03e890123cf8f47fe5aa6840be721d068b87f6eb1e08a7cc89566916b923"
     },
     {
       "path": "04_完整演示/prepare_applewatch.py",
-      "bytes": 2974,
-      "sha256": "a7f49d48b4fad66ca2dcb16a225c3225f238a78b2c20c30ce4305e67b125a9ea"
+      "bytes": 2966,
+      "sha256": "cf5c415e03bb9f56db4da5737af99c8323c8cfe44c5c9badea6dd464dea1419e"
     },
     {
       "path": "04_完整演示/release.py",
-      "bytes": 2433,
-      "sha256": "5c04c50d9114da0c168e0f25e2eaf2ba73e81d3cb1838906f62ca5ca6f77f942"
+      "bytes": 2431,
+      "sha256": "4fe8c7d330db59d034351cb468f1a1d3934635a12eb1d467eb6bf2cf6cec1129"
     },
     {
       "path": "04_完整演示/template.html",
-      "bytes": 18901,
-      "sha256": "540ea4a9075cea073fbaaffbfdb71c9e7a0f1fac355c3e15f3e174816024b994"
+      "bytes": 18896,
+      "sha256": "7ab4e964038b870cfce3d33885a59b39fc9c3d2b3512c6f1a87c45daffb47420"
     },
     {
       "path": "04_完整演示/verify.cjs",
-      "bytes": 17283,
-      "sha256": "857a051a08e7b6313bf73389637938c6f5a7be7ee009fcfcaff36c0909a0ec6a"
+      "bytes": 17256,
+      "sha256": "462047e1e9858de89834065da7f019ef022741ac69d25fad4d476bf596369b2b"
     },
     {
       "path": "README.md",
-      "bytes": 4332,
-      "sha256": "0af2a8ee9eaa65f196615d5212b3ba16619aed8e7ef0b1201147b48729e58d01"
+      "bytes": 4359,
+      "sha256": "84aa748d3e9bd64cd3a5314854c40bb036d36c0e3fa0438c787fbf00bc6044c2"
     },
     {
       "path": "docs/发布准备说明.md",
@@ -807,8 +807,8 @@
     },
     {
       "path": "SHA256SUMS",
-      "bytes": 18062,
-      "sha256": "2d2d32efa1add596202004e2f636fe7b7b90f248b55456d383ffaef269f7c81f"
+      "bytes": 18050,
+      "sha256": "612c9276c640e8b2eb9de5b7b506dfe8c221100035a63e0f3b35de2126dd771a"
     }
   ]
 }

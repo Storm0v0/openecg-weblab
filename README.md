@@ -2,7 +2,7 @@
 
 [25 条完整演示文件](04_完整演示/OpenECG_Demo.html) · [处理与页面源码](04_完整演示/) · [算法与测量协议](03_网站与算法源码/docs/定量对照协议.md)
 
-单导联心电信号分析课程项目，基于 [OpenECG](https://github.com/vitaldb/openecg)。当前版本包含 **25 条十秒记录：LUDB 10 条、QTDB 10 条、Apple Watch A–E 五条**。仓库保持私有，包含经持有人授权上传的五条匿名个人心电片段。
+单导联心电信号分析课程项目，基于 [OpenECG](https://github.com/vitaldb/openecg)。当前版本包含 **25 条十秒记录：LUDB 10 条、QTDB 10 条、匿名记录 A–E 五条**。仓库公开提供源码和演示，五条个人心电片段按授权以匿名记录 A–E 发布。
 
 ## 查看演示
 
@@ -11,7 +11,7 @@ git clone https://github.com/storm0699/openecg-weblab.git
 cd openecg-weblab
 ```
 
-下载后用浏览器打开 **`04_完整演示/OpenECG_Demo.html`**。样式、脚本和数据已内嵌，无需安装 Python 或 npm 依赖。默认展示 Apple Watch A；选择记录后自动展示。页面标题下附有本仓库链接。
+下载后用浏览器打开 **`04_完整演示/OpenECG_Demo.html`**。样式、脚本和数据已内嵌，无需安装 Python 或 npm 依赖。默认展示匿名记录 A；选择记录后自动展示。页面标题下附有本仓库链接。
 
 公网展示目前保持关闭。仓库中的华为云脚本供另行部署使用，本次更新没有启动云端服务。
 
@@ -75,4 +75,4 @@ QRS 时限为 `(end - start) × 1000` 毫秒，窗口边缘区间不计入汇总
 
 公开数据来自 [LUDB 1.0.1](https://physionet.org/content/ludb/1.0.1/) 和 [QT Database 1.0.0](https://physionet.org/content/qtdb/1.0.0/)，保留 ODC Attribution License v1.0 署名。OpenECG 上游代码采用 Apache-2.0。详见[来源与许可说明](docs/来源与许可说明.md)。
 
-个人 Apple Watch 片段不适用公开数据库的数据许可，按本次授权保留在私有仓库中。项目调用预训练模型，没有训练新模型；测量及边界结果用于课程演示。
+个人 Apple Watch 片段不适用公开数据库的数据许可，按持有人授权以匿名记录 A–E 公开展示。项目调用预训练模型，没有训练新模型；测量及边界结果用于课程演示。
