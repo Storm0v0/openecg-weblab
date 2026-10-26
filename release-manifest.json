@@ -692,23 +692,23 @@
     },
     {
       "path": "04_完整演示/OpenECG_Demo.html",
-      "bytes": 1409166,
-      "sha256": "a4c99dd4c3f0dacc78874e7d7e2343213ce9960ba7ab193ddefffcc01bec569e"
+      "bytes": 1409236,
+      "sha256": "6d7589d406ae33ec4985f956b527764a49509809ac8a3e087adae31f4f848a5d"
     },
     {
       "path": "04_完整演示/README.md",
-      "bytes": 1886,
-      "sha256": "8e8cf7584983eb918ceced83aa8d040adf41617c00077efa4d287748aa80f960"
+      "bytes": 1911,
+      "sha256": "e04d4d3d437d06004bc80b340255ee185e6c76ce67407c1f1f309e59fb1296cc"
     },
     {
       "path": "04_完整演示/app.js",
-      "bytes": 37962,
-      "sha256": "b43440bd2e288b76687b4efdcc3653373a6479cfbda1e813ab7232ed8243be0b"
+      "bytes": 37973,
+      "sha256": "f06693c534efd26b0c38581ada47c752a05d86b488f31bf6a9ff3f12693a968e"
     },
     {
       "path": "04_完整演示/app_template.js",
-      "bytes": 37962,
-      "sha256": "b43440bd2e288b76687b4efdcc3653373a6479cfbda1e813ab7232ed8243be0b"
+      "bytes": 37973,
+      "sha256": "f06693c534efd26b0c38581ada47c752a05d86b488f31bf6a9ff3f12693a968e"
     },
     {
       "path": "04_完整演示/base.css",
@@ -723,12 +723,12 @@
     {
       "path": "04_完整演示/build_manifest.json",
       "bytes": 1138,
-      "sha256": "92c0b014e78f79865191776e17189516a60343b34bae855f9af90c18b1a1ee56"
+      "sha256": "4d0e34e09aba4adefb9057f7a0ccf9e3018a4406b1f32832e0dd288864496b3a"
     },
     {
       "path": "04_完整演示/data/anonymous_records.json",
-      "bytes": 456097,
-      "sha256": "3587a80392bef21f6c8e2371d65c5931c65bd948190ef9bd80066b0d95d72bf9"
+      "bytes": 456157,
+      "sha256": "e925884534fff998f1dc421782190762f04b3a93af0269ec31775ec3039c0a86"
     },
     {
       "path": "04_完整演示/data/catalog.json",
@@ -763,7 +763,7 @@
     {
       "path": "04_完整演示/data/provenance.json",
       "bytes": 2468,
-      "sha256": "7c5d860c448d9f38b04a273ed6d908235e90255c08d48ba418fdcc560cf903e0"
+      "sha256": "5bec4ffd9eed6c9f6e91f2dfe78fe32da80cb8804c581677627ef8c626eef192"
     },
     {
       "path": "04_完整演示/extract_pdf_vectors.py",
@@ -782,8 +782,8 @@
     },
     {
       "path": "04_完整演示/template.html",
-      "bytes": 18896,
-      "sha256": "7ab4e964038b870cfce3d33885a59b39fc9c3d2b3512c6f1a87c45daffb47420"
+      "bytes": 18895,
+      "sha256": "43814a16a5b189dd90287ccefad2a2b96dde8462969af0f8c1bac2cbffdaf506"
     },
     {
       "path": "04_完整演示/verify.cjs",
@@ -792,8 +792,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4412,
-      "sha256": "0ad759b6e20519a82221dca89d84bc4ae9a0e151b4efda1a9493c711f2183998"
+      "bytes": 4461,
+      "sha256": "b40176e8d7d885c5156f89dc318ede615d62199aad09e11f6cbe3c9f87e44496"
     },
     {
       "path": "docs/发布准备说明.md",
@@ -808,7 +808,7 @@
     {
       "path": "SHA256SUMS",
       "bytes": 18050,
-      "sha256": "f16f1a2269643bb9e3122032b1b7a5a7ecfe1bc2dcc91780e082b7ed11042eb6"
+      "sha256": "7f1908797650bc38196aedc1756e602b812ab9cd3ec7da2a72732c52353ce1e0"
     }
   ]
 }

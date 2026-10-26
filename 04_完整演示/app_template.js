@@ -6,7 +6,7 @@ const $ = id => document.getElementById(id);
 const colors = {P:'#e88089',QRS:'#45a5d1',T:'#39b497',R:'#e6a044'};
 const state = {source:'APPLEWATCH',selected:'anonymous-a',current:null,filtered:true,truth:false,flags:{P:true,QRS:true,T:true,R:true},range:[0,10],busy:false,drag:null,geometry:null,focus:null,comparisonKind:'all',issuesOnly:false};
 const plot = $('plot');
-const sourceNames={LUDB:'LUDB',QTDB:'QTDB',APPLEWATCH:'匿名记录'};
+const sourceNames={LUDB:'LUDB',QTDB:'QTDB',APPLEWATCH:'Apple Watch'};
 const sourceTabs={LUDB:'tab-ludb',QTDB:'tab-qtdb',APPLEWATCH:'tab-applewatch'};
 function isAppleWatch(d=state.current){return d?.dataset==='APPLEWATCH';}
 function sourceName(source){return sourceNames[source]||source;}
@@ -14,7 +14,7 @@ function unitName(d=state.current){return isAppleWatch(d)?'相对毫伏':'毫伏
 function inputName(d=state.current){return isAppleWatch(d)?'PDF重建信号':'原始信号';}
 function sourceWindowLabel(d){const w=isAppleWatch(d)?d.pdfReconstruction.windowSec:[d.startSec,d.startSec+d.raw.length/d.fs];return `${Number(w[0])}–${Number(w[1])}`;}
 function duplicateNote(d){const id=d?.pdfReconstruction?.duplicateOf;return id?`${records.find(r=>r.id===id)?.record||id} 的重复导出`:'';}
-function label(d) { return d && typeof d.record==='string' ? isAppleWatch(d)?`匿名记录 ${d.record}${duplicateNote(d)?'（'+duplicateNote(d)+'）':''}`:`${d.dataset==='LUDB'?'LUDB 记录':'QTDB'} ${d.record} · ${typeof d.lead==='string'?d.lead.toUpperCase():'未知'} 导联` : '本地心电演示记录'; }
+function label(d) { return d && typeof d.record==='string' ? isAppleWatch(d)?`Apple Watch 匿名记录 ${d.record}${duplicateNote(d)?'（'+duplicateNote(d)+'）':''}`:`${d.dataset==='LUDB'?'LUDB 记录':'QTDB'} ${d.record} · ${typeof d.lead==='string'?d.lead.toUpperCase():'未知'} 导联` : '本地心电演示记录'; }
 function stage(n, failed=false) {
  $('progress').setAttribute('aria-valuenow',String(n)); $('progress-fill').style.width=`${n/3*100}%`;
  $('status-label').textContent = failed ? '加载失败' : n===3 ? '已展示' : n===2 ? '校验并绘制…' : n===1 ? '读取内置结果…' : '等待加载';

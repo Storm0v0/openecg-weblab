@@ -35,11 +35,11 @@
   "publicPayloadSource": "01_离线演示/OpenECG_Demo.html",
   "publicPayloadSourceSha256": "8577d5306e1ad90a1f74f4fca54cb9ebb2026dfb22ef92d2cfa7110e36ae2274",
   "anonymousPayloadSource": "data/anonymous_records.json",
-  "anonymousPayloadSourceSha256": "3587a80392bef21f6c8e2371d65c5931c65bd948190ef9bd80066b0d95d72bf9",
+  "anonymousPayloadSourceSha256": "e925884534fff998f1dc421782190762f04b3a93af0269ec31775ec3039c0a86",
   "publishedToCloud": false,
   "uploadedToGitHub": false,
   "outputs": {
-    "app.js": "b43440bd2e288b76687b4efdcc3653373a6479cfbda1e813ab7232ed8243be0b",
-    "OpenECG_Demo.html": "a4c99dd4c3f0dacc78874e7d7e2343213ce9960ba7ab193ddefffcc01bec569e"
+    "app.js": "f06693c534efd26b0c38581ada47c752a05d86b488f31bf6a9ff3f12693a968e",
+    "OpenECG_Demo.html": "6d7589d406ae33ec4985f956b527764a49509809ac8a3e087adae31f4f848a5d"
   }
 }

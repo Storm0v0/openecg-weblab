@@ -1,6 +1,6 @@
 # 25 条完整演示
 
-用浏览器打开 `OpenECG_Demo.html`。包含 LUDB 10 条、QTDB 10 条、匿名记录 A–E 五条；默认展示 A，切换记录自动加载。
+用浏览器打开 `OpenECG_Demo.html`。包含 LUDB 10 条、QTDB 10 条、Apple Watch 匿名记录 A–E 五条；默认展示 A，切换记录自动加载。
 
 ```sh
 python "04_完整演示/build_demo.py"
@@ -13,7 +13,7 @@ node "04_完整演示/verify.cjs"
 | --- | --- |
 | `template.html`、`base.css`、`app_template.js` | 页面与交互源码 |
 | `build_demo.py` | 内嵌 25 条记录、样式与脚本 |
-| `data/anonymous_records.json` | 五条匿名记录的冻结结果 |
+| `data/anonymous_records.json` | 五条 Apple Watch 匿名记录的冻结结果 |
 | `data/inputs/*.json` | 每条所选十秒段的 5120 个 PDF 重建输入点 |
 | `data/catalog.json`、`data/provenance.json` | 窗口、输入哈希和模型指纹 |
 | `extract_pdf_vectors.py` | 从自行提供的 PDF 提取完整十秒输入 |
