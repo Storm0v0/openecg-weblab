@@ -69,7 +69,7 @@ for(const entry of provenance.records){
  assert.equal(d.pdfReconstruction.duplicateOf,undefined);
 }
 assert.equal(new Set(provenance.records.map(r=>r.inputFloat64LeSha256)).size,5);
-assert(/<h1>[^<]+<\/h1><p class="github-link"><a href="https:\/\/github.com\/storm0699\/openecg-weblab"/.test(html),'GitHub link immediately below heading');
+assert(/<h1>[^<]+<\/h1><p class="github-link"><a href="https:\/\/github.com\/Storm0v0\/openecg-weblab"/.test(html),'GitHub link immediately below heading');
 class Element{
  constructor(id=''){this.id=id;this.children=[];this.attrs={};this.dataset={};this.handlers={};this.style={};this.hidden=false;this.disabled=false;this.value='';this.checked=false;this.classList={toggle:()=>{}};this._html='';this.textContent='';}
  setAttribute(k,v){this.attrs[k]=String(v);}getAttribute(k){return this.attrs[k];}

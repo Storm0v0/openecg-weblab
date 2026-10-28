@@ -42,8 +42,8 @@
     },
     {
       "path": "01_离线演示/prepare_github.py",
-      "bytes": 33279,
-      "sha256": "a81e6106902d800c0da3755b1bb52f08b1b10bacdc9be8fe6040dcc8bd8f9281"
+      "bytes": 33278,
+      "sha256": "50d47736602be4ec4d8486833f04640ca0ebc55f1f5768acf7bcc1d56970bf35"
     },
     {
       "path": "01_离线演示/release_static.py",
@@ -692,8 +692,8 @@
     },
     {
       "path": "04_完整演示/OpenECG_Demo.html",
-      "bytes": 1409220,
-      "sha256": "3142450d89ea35277d9b0bbef8f1b658a6ae713a2c4686fc0f4db9810b2b5371"
+      "bytes": 1409218,
+      "sha256": "f738fd3934d68dc6bd74796c6ac7b6db1c7b6f9dea3c144f1a0df69ec1b602ed"
     },
     {
       "path": "04_完整演示/README.md",
@@ -723,7 +723,7 @@
     {
       "path": "04_完整演示/build_manifest.json",
       "bytes": 1134,
-      "sha256": "35209eea6e09c24238391bd13117faa7eb3332507b27e7e83fe8416500d32fa2"
+      "sha256": "61c121cd7c60a8e174b38abc260a77df7eac82445a13a7b74d0b678baae8af37"
     },
     {
       "path": "04_完整演示/data/anonymous_records.json",
@@ -782,18 +782,18 @@
     },
     {
       "path": "04_完整演示/template.html",
-      "bytes": 18889,
-      "sha256": "8bb93180a0ef1a189c0c2a40417a9394f122f36ea534519270a026bc3ace0538"
+      "bytes": 18887,
+      "sha256": "df4bfbf4bd73a62b256aa8bc37bd09875dc820a5f4586b34a0bdcf19993df3ce"
     },
     {
       "path": "04_完整演示/verify.cjs",
-      "bytes": 17299,
-      "sha256": "c525742a57f0844037762765dd20bcba3d04660ac7f8439e3bfa0e92880f4590"
+      "bytes": 17298,
+      "sha256": "a962fd81a72d83eda1e4d2721c9e0dfc1df18e07c435861cead4b45d878dcda7"
     },
     {
       "path": "README.md",
-      "bytes": 4449,
-      "sha256": "16eb2fab6ebfd6af286506d4c91d18e65ec46a23909e593828d199d2b2e0256b"
+      "bytes": 4448,
+      "sha256": "eff7a3f3aee32a9fc57383b57c550492aa11866fe30186fd3bbf1955c308a28d"
     },
     {
       "path": "docs/发布准备说明.md",
@@ -808,7 +808,7 @@
     {
       "path": "SHA256SUMS",
       "bytes": 18050,
-      "sha256": "2c0cc79277a4333431b4a335d53da522ba99bdbea9ea364679e261f5498b6748"
+      "sha256": "f88b1b7c290b5dc2c82f7909f841d13846e3340a7eb449906d69d67881a83ae1"
     }
   ]
 }

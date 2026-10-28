@@ -7,7 +7,7 @@
 ## 查看演示
 
 ```sh
-git clone https://github.com/storm0699/openecg-weblab.git
+git clone https://github.com/Storm0v0/openecg-weblab.git
 cd openecg-weblab
 ```
 
